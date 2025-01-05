@@ -74,7 +74,7 @@ if (window.innerWidth < 12000) {
 
 
 /*Navbar All Text Start*/
-document.getElementById("logo").src = "/logo/logo.png";
+document.getElementById("logo").src = "./logo/logo.png";
 const logo_text = document.getElementById('logo_text').innerHTML= "<a id='logo_text' href='index.html'>HCMHS</a>";
 
 
