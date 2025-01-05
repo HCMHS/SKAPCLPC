@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Admin Login</title>
+    <meta name="title" content="Holy Child Care School & College" />
+    <meta name="description" content="A school is an educational institution designed to provide learning spaces and learning environments for the teaching of students under the direction of teachers." />
+    <meta name="keywords" content="Holy Child,Holy Child School,Online Education,Online Admission,Online,Online Class,Online Exam" />
+    <meta name="author" content="Holy Child Care School & College" />
+    <meta name="application-name" content="HCCSC Online Portal" />
+    
+    
+    <!--Animation Library CSS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+    
+    <!--Google Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Lobster&family=Oleo+Script&display=swap" rel="stylesheet">
+    
+    
+    <!--Bangla Font CDN Start-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
+    <!--Bangla Font CDN End-->
+    
+    
+    <!--Alert Message CDN Start-->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <!--Alert Message CDN END-->
+    
+    
+
+    <link
+        rel="Logo Icon"
+        type="image/png"
+        href="./logo/logo.png"
+      >
+      
+    <!-- Style CSS -->  
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/admin.css" />
+    
+  </head>
+  <body>
+  <!--Check Network Start-->
+  <div class="popup">
+    <div class="icon-net"><i class="uil uil-wifi"></i></div>
+    <div class="details-net">
+      <h2 class="title-net"></h2>
+      <p class="desc"></p>
+      <button class="reconnect">Reconnect Now</button>
+    </div>
+  </div>
+  <!--Check Network End-->
+      <!--Update Timer Start-->
+      <div id="updatebox" data-aos="zoom-in">
+        <h3 id="update-icon"></h3>
+        <h2 id="update-head"></h2>
+        <p id="update-text"></p>
+        <div id="countupdate">
+          <ul>
+            <li><span id="daysUpdate"></span>Days</li>
+            <li><span id="hoursUpdate"></span>Hours</li>
+            <li><span id="minutesUpdate"></span>Minutes</li>
+            <li><span id="secondsUpdate"></span>Seconds</li>
+          </ul>
+        </div>
+        <p id="update-credit"></p>
+      </div>
+      <!--Update Timer End-->
+<!-- navbar -->
+  <header id="body">
+    <nav class="navbar">
+      <div class="logo_item">
+        <i class="bx bx-menu" id="sidebarOpen"></i>
+        <img src="./logo/logo.png" class="logo" id="logo" alt="" ><span id="logo_text"></span>
+      </div>
+
+      <div class="navbar_content">
+        <i class="bi bi-grid"></i>
+        <i class='bx bx-sun' id="darkLight"></i>
+        <i class='bx bx-user' id="user" onclick="toggleMenu()"></i> 
+       
+        <div class="sub-menu-wrap" id="subMenu"> 
+          <div class="sub-menu">
+            <div class="user-info">
+              <h2 id="login"></h2>
+            </div>
+            <hr class="hr2">
+              <a class="sub-menu-link">
+                <img src="./logo/student.svg" class="img-size" id="std-svg">
+                <p class="log-size" id="std_text"></p>
+              </a>
+              
+              <a class="sub-menu-link">
+                <img src="./logo/admin.svg" class="img-size" id="ad-svg">
+                <p class="log-size" id="ad_text"></p>
+              </a>
+              
+              <a class="sub-menu-link">
+                <img src="./logo/teacher.svg" class="img-size" id="tea-svg">
+                <p class="log-size" id="tea_text"></p>
+              </a>
+          </div>
+        </div>
+      
+      </div>
+    </nav>
+    
+    <!-- sidebar -->
+    <nav class="sidebar">
+      <div class="menu_content">
+        <ul class="menu_items">
+           <div class="menu_title menu_dahsboard"></div>
+          <!-- duplicate or remove this li tag if you want to add or remove navlink with submenu -->
+          <!-- start -->
+          <a href="#" class="menu-style"><li class="item">
+            <div href="#" class="nav_link submenu_item">
+
+              <span class="navlink_icon" id="home-icon">
+                
+              </span>
+              <span class="navlink" id="home_text"></span>
+            </div>
+          </li></a>
+          <!-- end -->
+
+          <!-- duplicate this li tag if you want to add or remove  navlink with submenu -->
+          <!-- start -->
+          <a href="#" class="menu-style"><li class="item">
+            <div href="#" class="nav_link submenu_item">
+              <span class="navlink_icon" id="ac-icon">
+                
+              </span>
+              <span class="navlink" id="ac_text"></span>
+            </div>
+          </li></a>
+          <!-- end -->
+        </ul>
+
+        <ul class="menu_items">
+          <div class="menu_title menu_editor"></div>
+          <!-- duplicate these li tag if you want to add or remove navlink only -->
+          <!-- Start -->
+          <a href="#" class="menu-style"><li class="item">
+            <a href="#" class="nav_link">
+              <span class="navlink_icon" id="adm-icon">
+                
+              </span>
+              <span class="navlink" id="adm_text"></span>
+            </a>
+          </li></a>
+          <!-- End -->
+          
+          <li class="item">
+            <div href="#" class="nav_link submenu_item">
+              <span class="navlink_icon" id="gal-icon">
+                
+              </span>
+              <span class="navlink" id="gal_text"></span>
+              <i class="bx bx-chevron-right arrow-left"></i>
+            </div>
+            <ul class="menu_items submenu">
+              
+              <a href="#" class="nav_link submenu_item">
+                <span class="navlink_icon" id="pto-icon">
+                  
+                </span>
+                <span class="navlink" id="pto_text"></span>
+              </a>
+              <a href="#" class="nav_link submenu_item">
+                <span class="navlink_icon" id="vdo-icon">
+                  
+                </span>
+                <span class="navlink" id="vdo_text"></span>
+              </a>
+            </ul>
+          </li>
+          <a href="#" class="menu-style"><li class="item">
+           <a href="#" class="nav_link">
+              <span class="navlink_icon" id="rst-icon">
+                
+              </span>
+              <span class="navlink" id="rst_text"></span>
+            </a>
+          </li></a>
+          <a href="#" class="menu-style"><li class="item">
+            <a href="#" class="nav_link">
+              <span class="navlink_icon" id="faq-icon">
+                
+              </span>
+              <span class="navlink" id="faq_text"></span>
+            </a>
+          </li></a>
+        </ul>
+        
+        <ul class="menu_items">
+          <div class="menu_title menu_setting"></div>
+          <a href="#" class="menu-style"><li class="item">
+            <a href="#" class="nav_link">
+              <span class="navlink_icon" id="nb-icon">
+                
+              </span>
+              <span class="navlink" id="nb_text"></span>
+            </a>
+          </li></a>
+          <a href="#" class="menu-style"><li class="item">
+            <a href="#" class="nav_link">
+              <span class="navlink_icon" id="cu-icon">
+                
+              </span>
+              <span class="navlink" id="cu_text"></span>
+            </a>
+          </li></a>
+          <a href="#" class="menu-style"><li class="item">
+            <a href="#" class="nav_link">
+              <span class="navlink_icon" id="au-icon">
+                
+              </span>
+              <span class="navlink" id="au_text"></span>
+            </a>
+          </li></a>
+          
+          <li class="item">
+            <div href="#" class="nav_link submenu_item">
+              <span class="navlink_icon" id="ctv-icon">
+                
+              </span>
+              <span class="navlink" id="ctv_text"></span>
+              <i class="bx bx-chevron-right arrow-left"></i>
+            </div>
+            <ul class="menu_items submenu">
+          
+              <a href="#" class="nav_link submenu_item">
+                <span class="navlink_icon" id="qz-icon">
+                  
+                </span>
+                <span class="navlink" id="qz_text"></span>
+              </a>
+              <a href="#" class="nav_link submenu_item">
+                <span class="navlink_icon" id="gm-icon">
+                  
+                </span>
+                <span class="navlink" id="gm_text"></span>
+              </a>
+            </ul>
+          </li>
+          
+        </ul>
+          <div class="coll_hide collapse_sidebar">
+            <span id="coll_text"></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    
+    <!--Admin Login Content Start-->
+    <div id="selection">
+      <a href="student-login.html"><button id="student" class="deactive">Student</button></a>
+      <a href="admin-login.html"><button id="admin" class="active-admin">Admin</button></a>
+      <a href="teacher-login.html"><button id="teacher" class="deactive">Teacher</button></a>
+    </div>
+  <div class="wrapper_body">
+    <div class="wrapper">
+      <div class="title">Admin Login</div>
+      <form>
+        <div class="field">
+          <input type="number" id="username" required>
+          <label class="phone">Phone Number</label>
+        </div>
+        <div class="field">
+          <input type="password" id="password" required>
+          <label class="pin">Pin Number</label>
+        </div>
+        <i><p class="alert"></p></i>
+
+         <div class="field">
+           <button class="btn" id="btn" type="button" onclick="getInfo()">login</button>
+         </div>
+       </form>
+     </div>
+    </div>
+    
+ 
+     
+  <div style="display:none;" id="myDiv" class="myDiv">
+    
+    <div class="container">
+
+    <h1 class="admin-panel">Admin Panel</h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>Class: Play</h3>
+            <pad>1) Student Info</pad>
+            &nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>2) Payment Info</pad>
+            &nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+             <br><br>
+            <pad>3) Attandness Info</pad>
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>4) Result Info</pad>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+        </div>
+
+        <div class="box">
+            <h3>Class: Nursery</h3>
+            <pad>1) Student Info</pad>
+            &nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>2) Payment Info</pad>
+            &nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>3) Attandness Info</pad>
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>4) Result Info</pad>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+        </div>
+
+        <div class="box">
+            <h3>Class: KG</h3>
+            <pad>1) Student Info</pad>
+            &nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>2) Payment Info</pad>
+            &nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>3) Attandness Info</pad>
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>4) Result Info</pad>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+        </div>
+
+        <div class="box">
+            <h3>Class: 01</h3>
+            <pad>1) Student Info</pad>
+            &nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>2) Payment Info</pad>
+            &nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>3) Attandness Info</pad>
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>4) Result Info</pad>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+        </div>
+
+        <div class="box">
+            <h3>Class: 02</h3>
+            <pad>1) Student Info</pad>
+            &nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>2) Payment Info</pad>
+            &nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>3) Attandness Info</pad>
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>4) Result Info</pad>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+        </div>
+
+        <div class="box">
+            <h3>Class: 03</h3>
+            <pad>1) Student Info</pad>
+            &nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>2) Payment Info</pad>
+            &nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>3) Attandness Info</pad>
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>4) Result Info</pad>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+        </div>
+        
+        <div class="box">
+          <h3>Class: 04</h3>
+          <pad>1) Student Info</pad>
+          &nbsp&nbsp&nbsp&nbsp&nbsp
+          <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+          <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+          <br><br>
+          <pad>2) Payment Info</pad>
+          &nbsp&nbsp
+          <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+          <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+          <br><br>
+          <pad>3) Attandness Info</pad>
+          <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+          <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+          <br><br>
+          <pad>4) Result Info</pad>
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+          <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+        </div>
+        
+        <div class="box">
+            <h3>Class: 05</h3>
+            <pad>1) Student Info</pad>
+            &nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>2) Payment Info</pad>
+            &nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>3) Attandness Info</pad>
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>4) Result Info</pad>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+        </div>
+        
+        <div class="box">
+            <h3>Class: 06</h3>
+            <pad>1) Student Info</pad>
+            &nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>2) Payment Info</pad>
+            &nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>3) Attandness Info</pad>
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>4) Result Info</pad>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+        </div>
+        
+        <div class="box">
+            <h3>Class: 07</h3>
+            <pad>1) Student Info</pad>
+            &nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>2) Payment Info</pad>
+            &nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>3) Attandness Info</pad>
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>4) Result Info</pad>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+        </div>
+        
+        <div class="box">
+            <h3>Class: 08</h3>
+            <pad>1) Student Info</pad>
+            &nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>2) Payment Info</pad>
+            &nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>3) Attandness Info</pad>
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>4) Result Info</pad>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+        </div>
+        
+        <div class="box">
+            <h3>Class: 09</h3>
+            <pad>1) Student Info</pad>
+            &nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>2) Payment Info</pad>
+            &nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>3) Attandness Info</pad>
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>4) Result Info</pad>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+        </div>
+        
+        <div class="box">
+            <h3>Class: 10</h3>
+            <pad>1) Student Info</pad>
+            &nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>2) Payment Info</pad>
+            &nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>3) Attandness Info</pad>
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+            <br><br>
+            <pad>4) Result Info</pad>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+            <a href="#" class="fas fa-plus btn-admin" target="_blank"></a>
+            <a href="#" class="fas fa-eye btn-admin" target="_blank"></a>
+        </div>
+    </div>
+  </div>
+</div>
+    <!--Admin Login Content End-->
+    
+    
+    
+    <!--Footer Content Srart-->
+    <footer id="footer">
+      <div class="main-content">
+        <div class="left box">
+          <h2 id="about_text"></h2>
+          <div class="content">
+            <p id="intro_text"></p>
+            <div class="social" id="social">
+              <span id="fb"></span>
+              <span id="tw"></span>
+              <span id="ins"></span>
+              <span id="yt"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="center box">
+          <h2 id="add_text"></h2>
+          <div class="content">
+            <div class="place">
+              <span class="text" id="place_text"></span>
+            </div>
+            <div class="phone">
+              <span class="text" id="phone_text"></span>
+            </div>
+            <div class="email">
+              <span class="text" id="email_text"></span>
+            </div>
+            <div class="web">
+              <span class="text" id="web_text"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="right box">
+          <h2 id="vis_text"></h2>
+          <div class="content">
+            <div id="counter">
+              <div id="count-text">
+                <p id="count_text"></p>
+              </div>
+              <br>
+            </div>
+
+        </div>
+       </div>
+      </div>
+
+      <hr class="hr1">
+      <div class="bottom">
+        <center>
+          <span class="credit">Developed By <a href="https://www.facebook.com/amlan.paul.apc" class="credit-name" id="credit-name">Amlan Paul</a> | </span>
+          <span id="copyright">&copy;2023 -<script>document.write(new Date().getFullYear());</script> All Rights Reserved.</span>
+        </center>
+      </div>
+    </footer>
+    <!--Footer Content End-->
+    
+    <!--Scroll Button Start-->
+    <div id="progress">
+      <span id="progress-value"><i class='fas fa-arrow-up'></i></span>
+    </div>
+    <!--Scroll Button End-->
+    </header>
+    
+  
+  <!--Animated Library Js-->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 120,
+      duration: 1200,
+    });
+  </script>
+  
+  
+  
+  
+  <!-- JavaScript -->
+  <script src="./js/index.js"></script>
+  <script src="./database/admin-data.js"></script>
+  
+  </body>
+</html>
