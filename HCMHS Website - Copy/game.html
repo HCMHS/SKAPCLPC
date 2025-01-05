@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Game</title>
+    <meta name="title" content="Holy Child Care School & College" />
+    <meta name="description" content="A school is an educational institution designed to provide learning spaces and learning environments for the teaching of students under the direction of teachers." />
+    <meta name="keywords" content="Holy Child,Holy Child School,Online Education,Online Admission,Online,Online Class,Online Exam" />
+    <meta name="author" content="Holy Child Care School & College" />
+    <meta name="application-name" content="HCCSC Online Portal" />
+   
+    
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
+    <!--Animation Library CSS-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+    
+    <!--Google Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Lobster&family=Oleo+Script&display=swap" rel="stylesheet">
+    
+    
+    <!--Bangla Font CDN Start-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Galada&display=swap" rel="stylesheet">
+    <!--Bangla Font CDN End-->
+
+    <link
+        rel="Logo Icon"
+        type="image/png"
+        href="./logo/logo.png"
+      >
+      
+    <!-- Style CSS -->  
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/game.css" />
+    
+  </head>
+  <body>
+  <!--Check Network Start-->
+  <div class="popup">
+    <div class="icon-net"><i class="uil uil-wifi"></i></div>
+    <div class="details-net">
+      <h2 class="title-net"></h2>
+      <p class="desc"></p>
+      <button class="reconnect">Reconnect Now</button>
+    </div>
+  </div>
+  <!--Check Network End-->
+    <!--Update Timer Start-->
+    <div id="updatebox" data-aos="zoom-in">
+      <h3 id="update-icon"></h3>
+      <h2 id="update-head"></h2>
+      <p id="update-text"></p>
+      <div id="countupdate">
+        <ul>
+          <li><span id="daysUpdate"></span>Days</li>
+          <li><span id="hoursUpdate"></span>Hours</li>
+          <li><span id="minutesUpdate"></span>Minutes</li>
+          <li><span id="secondsUpdate"></span>Seconds</li>
+        </ul>
+      </div>
+      <p id="update-credit"></p>
+    </div>
+    <!--Update Timer End-->
+<!-- navbar -->
+  <header id="body">
+    <nav class="navbar">
+      <div class="logo_item">
+        <i class="bx bx-menu" id="sidebarOpen"></i>
+        <img src="./logo/logo.png" class="logo" id="logo" alt="" ><span id="logo_text"></span>
+      </div>
+
+      <div class="navbar_content">
+        <i class="bi bi-grid"></i>
+        <i class='bx bx-sun' id="darkLight"></i>
+        <i class='bx bx-user' id="user" onclick="toggleMenu()"></i> 
+       
+        <div class="sub-menu-wrap" id="subMenu"> 
+          <div class="sub-menu">
+            <div class="user-info">
+              <h2 id="login"></h2>
+            </div>
+            <hr class="hr2">
+              <a class="sub-menu-link">
+                <img src="./logo/student.svg" class="img-size" id="std-svg">
+                <p class="log-size" id="std_text"></p>
+              </a>
+              
+              <a class="sub-menu-link">
+                <img src="./logo/admin.svg" class="img-size" id="ad-svg">
+                <p class="log-size" id="ad_text"></p>
+              </a>
+              
+              <a class="sub-menu-link">
+                <img src="./logo/teacher.svg" class="img-size" id="tea-svg">
+                <p class="log-size" id="tea_text"></p>
+              </a>
+          </div>
+        </div>
+      
+      </div>
+    </nav>
+    
+    <!-- sidebar -->
+    <nav class="sidebar">
+      <div class="menu_content">
+        <ul class="menu_items">
+           <div class="menu_title menu_dahsboard"></div>
+          <!-- duplicate or remove this li tag if you want to add or remove navlink with submenu -->
+          <!-- start -->
+          <a href="#" class="menu-style"><li class="item">
+            <div href="#" class="nav_link submenu_item">
+              
+              <span class="navlink_icon" id="home-icon">
+                
+              </span>
+              <span class="navlink" id="home_text"></span>
+            </div>
+          </li></a>
+          <!-- end -->
+
+          <!-- duplicate this li tag if you want to add or remove  navlink with submenu -->
+          <!-- start -->
+          <a href="#" class="menu-style"><li class="item">
+            <div href="#" class="nav_link submenu_item">
+              <span class="navlink_icon" id="ac-icon">
+                
+              </span>
+              <span class="navlink" id="ac_text"></span>
+            </div>
+          </li></a>
+          <!-- end -->
+        </ul>
+
+        <ul class="menu_items">
+          <div class="menu_title menu_editor"></div>
+          <!-- duplicate these li tag if you want to add or remove navlink only -->
+          <!-- Start -->
+          <a href="#" class="menu-style"><li class="item">
+            <a href="#" class="nav_link">
+              <span class="navlink_icon" id="adm-icon">
+                
+              </span>
+              <span class="navlink" id="adm_text"></span>
+            </a>
+          </li></a>
+          <!-- End -->
+          
+          <li class="item">
+            <div href="#" class="nav_link submenu_item">
+              <span class="navlink_icon" id="gal-icon">
+                
+              </span>
+              <span class="navlink" id="gal_text"></span>
+              <i class="bx bx-chevron-right arrow-left"></i>
+            </div>
+            <ul class="menu_items submenu">
+              
+              <a href="#" class="nav_link submenu_item">
+                <span class="navlink_icon" id="pto-icon">
+                  
+                </span>
+                <span class="navlink" id="pto_text"></span>
+              </a>
+              <a href="#" class="nav_link submenu_item">
+                <span class="navlink_icon" id="vdo-icon">
+                  
+                </span>
+                <span class="navlink" id="vdo_text"></span>
+              </a>
+            </ul>
+          </li>
+          <a href="#" class="menu-style"><li class="item">
+           <a href="#" class="nav_link">
+              <span class="navlink_icon" id="rst-icon">
+                
+              </span>
+              <span class="navlink" id="rst_text"></span>
+            </a>
+          </li></a>
+          <a href="#" class="menu-style"><li class="item">
+            <a href="#" class="nav_link">
+              <span class="navlink_icon" id="faq-icon">
+                
+              </span>
+              <span class="navlink" id="faq_text"></span>
+            </a>
+          </li></a>
+        </ul>
+        
+        <ul class="menu_items">
+          <div class="menu_title menu_setting"></div>
+          <a href="#" class="menu-style"><li class="item">
+            <a href="#" class="nav_link">
+              <span class="navlink_icon" id="nb-icon">
+                
+              </span>
+              <span class="navlink" id="nb_text"></span>
+            </a>
+          </li></a>
+          <a href="#" class="menu-style"><li class="item">
+            <a href="#" class="nav_link">
+              <span class="navlink_icon" id="cu-icon">
+                
+              </span>
+              <span class="navlink" id="cu_text"></span>
+            </a>
+          </li></a>
+          <a href="#" class="menu-style"><li class="item">
+            <a href="#" class="nav_link">
+              <span class="navlink_icon" id="au-icon">
+                
+              </span>
+              <span class="navlink" id="au_text"></span>
+            </a>
+          </li></a>
+          
+          <li class="item">
+            <div href="#" class="nav_link submenu_item">
+              <span class="navlink_icon" id="ctv-icon">
+                
+              </span>
+              <span class="navlink" id="ctv_text"></span>
+              <i class="bx bx-chevron-right arrow-left"></i>
+            </div>
+            <ul class="menu_items submenu">
+          
+              <a href="#" class="nav_link submenu_item">
+                <span class="navlink_icon" id="qz-icon">
+                  
+                </span>
+                <span class="navlink" id="qz_text"></span>
+              </a>
+              <a href="#" class="nav_link submenu_item">
+                <div id="active"><i class='fas fa-hand-point-right' id="active-hand"></i></div>
+                <span class="navlink_icon" id="gm-icon">
+                  
+                </span>
+                <span class="navlink" id="gm_text"></span>
+              </a>
+            </ul>
+          </li>
+          
+        </ul>
+          <div class="coll_hide collapse_sidebar">
+            <span id="coll_text"></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Content Start-->
+    <div class="all-content">
+     <h3 class="heading" data-aos="zoom-in">গেইম</h3>
+     <div class="container" data-aos="fade-right">
+      <!-- Images Filter Buttons Section -->
+      <div class="row" id="filter-buttons">
+        <div class="col-12">
+          <button class="btn active" data-filter="all">All</button>
+          <button class="btn" data-filter="Video Games">Video Games</button>
+          <button class="btn" data-filter="Guess Games">Guess Games</button>
+          <button class="btn" data-filter="IQ">IQ</button>
+          <button class="btn" data-filter="Other">Other</button>
+        </div>
+      </div>
+      <br>
+
+      <!-- Filterable Images / Cards Section -->
+      <div class="row1" id="filterable-cards">
+        <div class="card" data-name="Video Games">
+          <img src="./images/menja.jpg" alt="img">
+          <div class="new">
+            <h6>New</h6>
+          </div>
+          <div class="played">
+            <h6><i class="fas fa-eye"></i>&nbsp;<span1>0</span1></h6>
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Menja</h6>
+           <div id="card-body">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <br>
+            
+            <div id="content">
+              <a href="./html/menja.html"><button class="play count1" id="play">Play</button></a>
+            </div>
+            <div id="content2" style="display: none">
+              <a><button type="button" class="end" disabled>Play</button></a>
+            </div>
+            
+            <div id="new-year">
+            
+              <div class="container-time">
+                <h6 id="headline"></h6>
+                <br>
+                
+                <div class="limited">
+                  <p>Time Limited🔥</p>
+                </div>
+                
+                <p id="timeEnd"></p>
+                
+                <div id="countdown">
+                  <ul>
+                    <li><span id="days01"></span></li>
+                    <span class="dots">:</span>
+                    <li><span id="hours01"></span></li>
+                    <span class="dots">:</span>
+                    <li><span id="minutes01"></span></li>
+                    <span class="dots">:</span>
+                    <li><span id="seconds01"></span></li>
+                  </ul>
+                </div>
+                
+            
+              </div>
+            </div>
+           
+            
+            
+           </div>
+          </div>
+        </div>
+        <div class="card" data-name="Video Games">
+          <img src="./images/tower-block.jpg" alt="img">
+          <div class="new">
+            <h6>New</h6>
+          </div>
+          <div class="played">
+            <h6><i class="fas fa-eye"></i>&nbsp;<span2>0</span2></h6>
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Tower Block</h6>
+            <div id="card-body">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star unchecked"></span>
+              <br>
+              <a href="./html/tower-block.html"><button class="play count2">Play</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-name="Guess Games">
+          <img src="./images/word-guess.jpg" alt="img">
+          <div class="new">
+            <h6>New</h6>
+          </div>
+          <div class="played">
+            <h6><i class="fas fa-eye"></i>&nbsp;<span3>0</span3></h6>
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Word Guess</h6>
+           <div id="card-body">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <br>
+            <a href="./html/word-guess.html"><button class="play count3">Play</button></a>
+           </div>
+          </div>
+        </div>
+        <div class="card" data-name="Guess Games">
+          <img src="./images/number-guess.jpg" alt="img">
+          <div class="new">
+            <h6>New</h6>
+          </div>
+          <div class="played">
+            <h6><i class="fas fa-eye"></i>&nbsp;<span4>0</span4></h6>
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Number Guess</h6>
+            <div id="card-body">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star unchecked"></span>
+              <br>
+              <a href="./html/number-guess.html"><button class="play count4">Play</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-name="IQ">
+          <img src="./images/water-puzzle.jpg" alt="img">
+          <div class="new">
+            <h6>New</h6>
+          </div>
+          <div class="played">
+            <h6><i class="fas fa-eye"></i>&nbsp;<span5>0</span5></h6>
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Water Puzzle</h6>
+           <div id="card-body">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <br>
+            <a href="./html/water-puzzle.html"><button class="play count5">Play</button></a>
+           </div>
+          </div>
+        </div>
+        <div class="card" data-name="IQ">
+          <img src="./images/word-scrabble.jpg" alt="img">
+          <div class="new">
+            <h6>New</h6>
+          </div>
+          <div class="played">
+            <h6><i class="fas fa-eye"></i>&nbsp;<span6>0</span6></h6>
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Word Scrabble</h6>
+            <div id="card-body">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star unchecked"></span>
+              <br>
+              <a href="./html/word-scrabble.html"><button class="play count6">Play</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-name="IQ">
+          <img src="./images/memory-card.jpg" alt="img">
+          <div class="new">
+            <h6>New</h6>
+          </div>
+          <div class="played">
+            <h6><i class="fas fa-eye"></i>&nbsp;<span7>0</span7></h6>
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Memory Card</h6>
+            <div id="card-body">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <br>
+              <a href="./html/memory-card.html"><button class="play count7">Play</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-name="IQ">
+          <img src="./images/number-puzzle.jpg" alt="img">
+          <div class="new">
+            <h6>New</h6>
+          </div>
+          <div class="played">
+            <h6><i class="fas fa-eye"></i>&nbsp;<span8>0</span8></h6>
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Number Puzzle</h6>
+            <div id="card-body">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star unchecked"></span>
+              <br>
+              <a href="./html/number-puzzle.html"><button class="play count8">Play</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-name="IQ">
+          <img src="./images/math.jpg" alt="img">
+          <div class="new">
+            <h6>New</h6>
+          </div>
+          <div class="played">
+            <h6><i class="fas fa-eye"></i>&nbsp;<span9>0</span9></h6>
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Math</h6>
+            <div id="card-body">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star unchecked"></span>
+              <br>
+              <a href="./html/math.html"><button class="play count9">Play</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-name="IQ">
+          <img src="./images/star-puzzle.jpg" alt="img">
+          <div class="new">
+            <h6>New</h6>
+          </div>
+          <div class="played">
+            <h6><i class="fas fa-eye"></i>&nbsp;<span11>0</span11></h6>
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Star Puzzle</h6>
+            <div id="card-body">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <br>
+              <a href="./html/star-puzzle.html"><button class="play count11">Play</button></a>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-name="Other">
+          <img src="./images/ttt.jpg" alt="img">
+          <div class="new">
+            <h6>New</h6>
+          </div>
+          <div class="played">
+            <h6><i class="fas fa-eye"></i>&nbsp;<span10>0</span10></h6>
+          </div>
+          <div class="card-body">
+            <h6 class="card-title">Tic Tac Toe</h6>
+            <div id="card-body">
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star unchecked"></span>
+              <span class="fa fa-star unchecked"></span>
+              <br>
+              <a href="./html/ttt.html"><button class="play count10">Play</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <br><br><br>
+    <!-- Content End-->
+    
+    
+    
+    <!--Footer Content Srart-->
+    <footer id="footer">
+      <div class="main-content">
+        <div class="left box">
+          <h2 id="about_text"></h2>
+          <div class="content">
+            <p id="intro_text"></p>
+            <div class="social" id="social">
+              <span id="fb"></span>
+              <span id="tw"></span>
+              <span id="ins"></span>
+              <span id="yt"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="center box">
+          <h2 id="add_text"></h2>
+          <div class="content">
+            <div class="place">
+              <span class="text" id="place_text"></span>
+            </div>
+            <div class="phone">
+              <span class="text" id="phone_text"></span>
+            </div>
+            <div class="email">
+              <span class="text" id="email_text"></span>
+            </div>
+            <div class="web">
+              <span class="text" id="web_text"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="right box">
+          <h2 id="vis_text"></h2>
+          <div class="content">
+            <div id="counter">
+              <div id="count-text">
+                <p id="count_text"></p>
+              </div>
+              <br>
+            </div>
+
+        </div>
+       </div>
+      </div>
+
+      <hr class="hr1">
+      <div class="bottom">
+        <center>
+          <span class="credit">Developed By <a href="https://www.facebook.com/amlan.paul.apc" class="credit-name" id="credit-name">Amlan Paul</a> | </span>
+          <span id="copyright">&copy;2023 -<script>document.write(new Date().getFullYear());</script> All Rights Reserved.</span>
+        </center>
+      </div>
+    </footer>
+    <!--Footer Content End-->
+    
+    <!--Scroll Button Start-->
+    <div id="progress">
+      <span id="progress-value"><i class='fas fa-arrow-up'></i></span>
+    </div>
+    <!--Scroll Button End-->
+    </header>
+    
+  
+  <!--Animated Library Js-->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 120,
+      duration: 1200,
+    });
+  </script>
+    
+    
+  <!-- JavaScript -->
+  <script src="./js/index.js"></script>
+  <script src="./js/game.js"></script>
+  
+  
+  </body>
+</html>

@@ -1,0 +1,269 @@
+.heading{
+  text-align: center;
+  margin-top: 1.5rem;
+  margin-bottom: 0rem;
+  margin-right: 10px;
+  color: var(--blue-color);
+  font-size: 2rem;
+  font-family: 'Galada', cursive;
+  padding-top: 10px;
+  text-transform: capitalize;
+  border: 2px solid var(--blue-color);
+  border-radius: 50px;
+  box-shadow: 5px 5px 40px var(--blue-color);
+}
+.container{
+  margin-top: 20px;
+}
+.row1{
+  margin-right: 10px;
+}
+#filterable-cards{
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 30px;
+}
+#filterable-cards > div{
+  height: 400px;
+  background-color: var(--silver-color);
+  margin: 10px;
+}
+.card img{
+  width: 100%;
+  height: auto;
+}
+.card-title{
+  color: var(--black-color);
+  font-size: 30px;
+  margin-top: 0px;
+}
+.card-body{
+  margin-top: 50px;
+}
+#card-body{
+  margin-top: 10px;
+}
+.card .new {
+  color: #fff;
+  background: green;
+  font-size: 1.5rem;
+  width: 20%;
+  border-radius: 30px;
+  float: left;
+  margin-top: -2px;
+  animation-name: new;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes new {
+  0%   {background-color:green; transform: rotate(-15deg);}
+  25%  {background-color:purple; transform: rotate(15deg);}
+  50%  {background-color:blue; transform: rotate(-15deg);}
+  75%  {background-color:Brown; transform: rotate(15deg);}
+  100% {background-color:red; transform: rotate(-15deg);}
+}
+.card .played {
+  color: #fff;
+  background: green;
+  font-size: 1.5rem;
+  width: 20%;
+  border-radius: 30px;
+  float: right;
+  margin-top: -2px;
+}
+#filter-buttons{
+  text-align: center;
+}
+
+#filter-buttons button {
+  cursor: pointer;
+  color: var(--black-color);
+  background: var(--white3-color);
+  width: 150px;
+  height: 40px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  appearance: none;
+}
+
+#filter-buttons button:hover {
+  background: #ddd;
+}
+
+#filter-buttons button.active {
+  color: var(--white-color);
+  background: var(--blue-color);
+}
+
+#filterable-cards .card {
+  width: 15rem;
+  border: 2px solid transparent;
+}
+
+#filterable-cards .card.hide {
+  display: none;
+}
+#filterable-cards .card {
+  text-align: center;
+  font-size: 20px;
+}
+.checked {
+  color: yellow;
+}
+.unchecked{
+  color: var(--black-color);
+}
+button.play{
+  font-size: 18px;
+  font-weight: 800;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 40px;
+  color: var(--white2-color);
+  background-color: dodgerblue;
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+button.play:hover{
+  color: var(--black-color);
+  background: var(--silver-color);
+  border: 2px solid dodgerblue;
+}
+
+/*Countdown Timer CSS Start*/
+.limited{
+  float: left;
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-top: -25px;
+  color: #0000ff;
+}
+.limited p{
+  font-family: 'Lobster', cursive;
+  letter-spacing: 2px;
+}
+#timeEnd{
+  float: right;
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-top: -25px;
+  color: #cc0000;
+  font-family: 'Lobster', cursive;
+  letter-spacing: 2px;
+}
+#countdown{
+  float: right;
+  margin-top: -25px;
+  width: 45%;
+  color: #cc0000;
+}
+#countdown li{
+  display: inline-block;
+  list-style-type: none;
+  text-transform: none;
+  font-size: 1.2rem;
+  font-weight: 800;
+  font-family: 'Lobster', cursive;
+}
+#days01, #hours01, #minutes01, #seconds01{
+  display: block;
+  font-size: 1.2rem;
+  font-family: 'Lobster', cursive;
+}
+.dots{
+  font-size: 1.5rem;
+  margin-left: 5px;
+  font-family: 'Lobster', cursive;
+}
+.end{
+  font-size: 18px;
+  font-weight: 800;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 40px;
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+/*Countdown Timer CSS End*/
+
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #filterable-cards > div {
+    height: 440px;
+  }
+  #filterable-cards {
+    justify-content: center;
+  }
+  
+  #filterable-cards .card {
+    width: calc(90% / 1 - 10px);
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  #filterable-cards > div {
+    height: 440px;
+  }
+  #filterable-cards {
+    justify-content: center;
+  }
+  
+  #filterable-cards .card {
+    width: calc(80% / 2 - 10px);
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #filterable-cards > div {
+    height: 440px;
+  }
+  #filterable-cards {
+    justify-content: center;
+  }
+  
+  #filterable-cards .card {
+    width: calc(60% / 2 - 10px);
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  #filterable-cards > div {
+      height: 440px;
+  }
+  #filterable-cards {
+    justify-content: center;
+  }
+  
+  #filterable-cards .card {
+    width: calc(80% / 3 - 10px);
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  #filterable-cards > div {
+    height: 440px;
+  }
+  #filterable-cards {
+    justify-content: center;
+  }
+  
+  #filterable-cards .card {
+    width: calc(80% / 3 - 10px);
+  }
+ 
+}
