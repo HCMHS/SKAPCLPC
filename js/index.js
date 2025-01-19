@@ -89,9 +89,6 @@ const ad_text = document.getElementById('ad_text').innerHTML = "<a href ='https:
 
 document.getElementById("tea-svg").src = "./logo/teacher.svg";
 const tea_text = document.getElementById('tea_text').innerHTML = "<a href ='#'>Teacher</a>";
-
-document.getElementById("acc-svg").src = "";
-const acc_text = document.getElementById('acc_text').innerHTML = "<a href ='account-portal.html'>Account</a>";
 /*document.getElementById("tea-svg").src = "./logo/teacher.svg";
 
 const tea_text = document.getElementById('tea_text');
