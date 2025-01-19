@@ -88,7 +88,7 @@ document.getElementById("ad-svg").src = "./logo/admin.svg";
 const ad_text = document.getElementById('ad_text').innerHTML = "<a href ='https://script.google.com/macros/s/AKfycbzV1pZr1CcDzZmHwR3B5jNGucleQVEIm_mOe0FkOXgW5TnIAulfxW4pywuibUpZMFL1Fg/exec'>Admin</a>";
 
 document.getElementById("tea-svg").src = "./logo/teacher.svg";
-const tea_text = document.getElementById('tea_text').innerHTML = "<a href ='#'>Teacher</a>";
+const tea_text = document.getElementById('tea_text').innerHTML = "<a href ='Account-Portal.html'>Teacher</a>";
 /*document.getElementById("tea-svg").src = "./logo/teacher.svg";
 
 const tea_text = document.getElementById('tea_text');
