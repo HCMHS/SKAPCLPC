@@ -88,7 +88,7 @@ document.getElementById("ad-svg").src = "./logo/admin.svg";
 const ad_text = document.getElementById('ad_text').innerHTML = "<a href ='https://script.google.com/macros/s/AKfycbzV1pZr1CcDzZmHwR3B5jNGucleQVEIm_mOe0FkOXgW5TnIAulfxW4pywuibUpZMFL1Fg/exec'>Admin</a>";
 
 document.getElementById("tea-svg").src = "./logo/teacher.svg";
-const tea_text = document.getElementById('tea_text').innerHTML = "<a href ='Account-Portal.html'>Teacher</a>";
+const tea_text = document.getElementById('tea_text').innerHTML = "<a href ='#'>Teacher</a>";
 /*document.getElementById("tea-svg").src = "./logo/teacher.svg";
 
 const tea_text = document.getElementById('tea_text');
@@ -135,7 +135,7 @@ const vdo_text = document.getElementById('vdo_text').innerHTML += `<a href="vide
 
 
 
-const rst_text = document.getElementById('rst_text').innerHTML += `<a href="result.html" class='nav_link_dec' id='manu-text'><i class='fas fa-poll' id='manu-icon'>&nbsp;</i>Result</a>`;
+const rst_text = document.getElementById('rst_text').innerHTML += `<a href="Account-Portal.html" class='nav_link_dec' id='manu-text'><i class='fas fa-poll' id='manu-icon'>&nbsp;</i>Result</a>`;
 
 const faq_text = document.getElementById('faq_text').innerHTML += `<a href="faq.html" class='nav_link_dec' id='manu-text'><i class='fas fa-question-circle' id='manu-icon'>&nbsp;</i>FAQ</a>`;
 
