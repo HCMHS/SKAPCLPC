@@ -135,7 +135,7 @@ const vdo_text = document.getElementById('vdo_text').innerHTML += `<a href="vide
 
 
 
-const rst_text = document.getElementById('rst_text').innerHTML += `<a href="Account-Portal.html" class='nav_link_dec' id='manu-text'><i class='fas fa-poll' id='manu-icon'>&nbsp;</i>Result</a>`;
+const rst_text = document.getElementById('rst_text').innerHTML += `<a href="account.html" class='nav_link_dec' id='manu-text'><i class='fas fa-poll' id='manu-icon'>&nbsp;</i>Result</a>`;
 
 const faq_text = document.getElementById('faq_text').innerHTML += `<a href="faq.html" class='nav_link_dec' id='manu-text'><i class='fas fa-question-circle' id='manu-icon'>&nbsp;</i>FAQ</a>`;
 
